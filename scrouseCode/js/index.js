@@ -82,7 +82,7 @@ window.onload = function () {
 
   //  为所有元素设置 init
   for(k in screenAnimateElements){
-    if(k == '.screen-1'){
+    if(k === '.screen-1'){
       continue;
     }
     setScreenAnimateInit(k);
@@ -212,3 +212,6 @@ var setTip = function(idx,lib){
 for(var i=0;i<navItems.length;i++){
   setTip(i,navItems);
 }
+setTimeout(function(){
+  playScreenAnimateDone('screen-1');
+}, 200);
